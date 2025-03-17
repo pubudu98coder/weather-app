@@ -21,6 +21,10 @@ const port = process.env.PORT || 5050;
 //built in middleware for json
 app.use(express.json());
 
+app.get('/home', (req, res) => {
+    res.status(200).json('Welcome, your app is working well');
+  })
+
 //api endpopints
 app.use('/api/user', userRouter);
 
