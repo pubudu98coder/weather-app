@@ -7,12 +7,17 @@ const errorHandler = require('./src/middleware/errorHandler');
 const cron = require('node-cron');
 const { sendWeatherReports } = require('./src/services/emailService');
 const { updateWeatherForAllUsers } = require('./src/services/weatherService');
+const cors = require('cors');
+
 
 //env cofiguration
 dotenv.config();
 
 //connect database
 connectDB();
+
+//cors enabling
+app.use(cors());
 
 //app cnfiguration
 const app = express();
