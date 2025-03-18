@@ -16,18 +16,18 @@ dotenv.config();
 //connect database
 connectDB();
 
-//cors enabling
-app.use(cors());
-
 //app cnfiguration
 const app = express();
 const port = process.env.PORT || 5050;
+
+//cors enabling
+app.use(cors());
 
 //built in middleware for json
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.status(200).json('Welcome, your app is working well');
+    res.status(200).json('Welcome, Weather app API');
   })
 
 //api endpopints
@@ -35,16 +35,14 @@ app.use('/api/user', userRouter);
 
 //global error handling middleware
 app.use(errorHandler);
-
-
-//'0 */1 * * *'
-cron.schedule('* * * * *', () => {
+//cron schedule for updating weather hourly
+cron.schedule('0 */1 * * *', () => {
     console.log("Fetching weather data...");
     updateWeatherForAllUsers();
 });
 
-//'1 */3 * * *'
-cron.schedule('*/3 * * * *', () => {
+//cron schedule for sending weather email in every 3 hour
+cron.schedule('1 */3 * * *', () => {
     sendWeatherReports();
     console.log("Weather Emails sent");
 });

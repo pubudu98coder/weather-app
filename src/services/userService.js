@@ -8,7 +8,6 @@ const { Client } = require('@googlemaps/google-maps-services-js');
 
 const addUser = async (userData) => {
     const user = userSchema.validate(userData)?.value;
-    console.log("user", user)
     const email = user.email;
 
     const exist = await User.findOne({email});
@@ -25,8 +24,6 @@ const addUser = async (userData) => {
     //get city using google geocoding API
     const city = await getCityFromCordinates(location.latitude, location.longitude);
 
-    console.log("city",city)
-
     const newUser = new User({
         email: user.email,
         password: hashPW,
@@ -39,7 +36,6 @@ const addUser = async (userData) => {
         const savedUser = await newUser.save();
         return savedUser;    
     } catch (error) {
-        console.log(error)
         throw new AppError("User registation failed", 500);
     }
 
@@ -117,13 +113,12 @@ const getCityFromCordinates = async (latitude, longitude) => {
         });
 
     } catch (error) {
-        console.log(error)
         throw new AppError(error.response?.data.error_message, 500);
     }        
 
     //check there are any result
     if (response.data.results.length === 0) {
-    throw new AppError("No results found", 404);
+        throw new AppError("No results found", 404);
     }
 
     //find the city from the response

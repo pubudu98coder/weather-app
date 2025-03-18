@@ -1,9 +1,6 @@
 const nodeMailer = require('nodemailer');
 const User = require('../models/User');
 const AppError = require('../utils/AppError');
-const { text } = require('express');
-const { getCityFromCordinates } = require('./userService');
-
 
 const trasporter = nodeMailer.createTransport({
     service: 'gmail',

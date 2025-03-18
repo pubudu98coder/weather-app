@@ -1,7 +1,6 @@
 const AppError = require("../utils/AppError");
 
 const errorHandler = (error, req, res, next) => {
-    console.log("Error",error);
     if (error.name === 'ValidationError') {
         return res.status(400).json({
             success: false,
@@ -17,7 +16,7 @@ const errorHandler = (error, req, res, next) => {
         });
     }
 
-    
+    console.log("Error",error);
     return res.status(500).json({
         success: false,
         message: "Internal server error"

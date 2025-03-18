@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "56a85960-520a-4f49-b441-be1650c14881",
+		"name": "weather-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31997671"
+	},
+	"item": [
+		{
+			"name": "Add new user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"pubudu.tharaka1998@gmail.com\",\r\n    \"password\": \"pubudu@123\",\r\n    \"location\": \"https://maps.app.goo.gl/EVaDJGM9AJYGTS687\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/user/register",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add new user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"pubudu.tharaka1998@gmail.com\",\r\n    \"password\": \"pubudu@123\",\r\n    \"location\": \"https://maps.app.goo.gl/EVaDJGM9AJYGTS687\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/user/register",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Content-Length",
+							"value": "365"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Mar 2025 13:35:43 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"16d-zXIguLho6i+pWVO0VGLFL9glF04\""
+						},
+						{
+							"key": "Server",
+							"value": "Vercel"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains; preload"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "X-Vercel-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Vercel-Id",
+							"value": "sin1::iad1::pbtzw-1742304937536-eb039a0be708"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"user\": {\n        \"email\": \"pubudu.tharaka1998@gmail.com\",\n        \"password\": \"$2b$10$8dxyPNEExfBjT1GgKSfY0eNHUZDetYvE1xydZwQ8s2c8MJvQPI5e6\",\n        \"location\": {\n            \"latitude\": 7.199265,\n            \"longitude\": 80.334208\n        },\n        \"city\": \"Hettimulla\",\n        \"locationUrl\": \"https://maps.app.goo.gl/EVaDJGM9AJYGTS687\",\n        \"_id\": \"67d976afd92fcc7894570c4b\",\n        \"weatherData\": [],\n        \"__v\": 0\n    },\n    \"message\": \"User added successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update weather",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/user/update-weather",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"user",
+						"update-weather"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update weather",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/user/update-weather",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"update-weather"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Mar 2025 13:17:45 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"39-KK4bQPUznrvgWu9g58wc5VPxVC8\""
+						},
+						{
+							"key": "Server",
+							"value": "Vercel"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains; preload"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "X-Vercel-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Vercel-Id",
+							"value": "sin1::iad1::qk464-1742303864225-aaa291e9c429"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"weather updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update user location",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location\":\"https://maps.app.goo.gl/8t6e2NB2YggYfgV39\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/user/update-location/67d5655594cac0591bb0a23c",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"user",
+						"update-location",
+						"67d5655594cac0591bb0a23c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update user location",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\":\"https://maps.app.goo.gl/55MrFHm9ALCgx4d4A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/user/update-location/67d8183b617fd4d76bc3a750",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"update-location",
+								"67d8183b617fd4d76bc3a750"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Mar 2025 13:39:35 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"a7-F41HQCI03MYuweRUXvxwJRhgBFk\""
+						},
+						{
+							"key": "Server",
+							"value": "Vercel"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains; preload"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "X-Vercel-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Vercel-Id",
+							"value": "sin1::iad1::q4b4f-1742305174686-f236ee1b4e08"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"user\": {\n        \"email\": \"pubudutharaka2014@gmail.com\",\n        \"location\": {\n            \"latitude\": 7.1991501,\n            \"longitude\": 80.3362165\n        }\n    },\n    \"message\": \"User location updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get weather data by date",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/user/get-weather-data/67d8183b617fd4d76bc3a750/2025-03-17",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"user",
+						"get-weather-data",
+						"67d8183b617fd4d76bc3a750",
+						"2025-03-17"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get weather data by date",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/user/get-weather-data/67d8183b617fd4d76bc3a750/2025-03-17",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"get-weather-data",
+								"67d8183b617fd4d76bc3a750",
+								"2025-03-17"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Age",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Mar 2025 13:15:58 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1305-2Q2uTpiXfa1sTzSdDtRQdLV6w8I\""
+						},
+						{
+							"key": "Server",
+							"value": "Vercel"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains; preload"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "X-Vercel-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Vercel-Id",
+							"value": "sin1::iad1::62kql-1742303752947-5763b1f9b8da"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"weatherData\": {\n        \"id\": \"67d8183b617fd4d76bc3a750\",\n        \"date\": \"2025-03-17\",\n        \"filteredWeatherData\": [\n            {\n                \"data\": {\n                    \"coord\": {\n                        \"lon\": 80.3342,\n                        \"lat\": 7.1993\n                    },\n                    \"weather\": [\n                        {\n                            \"id\": 501,\n                            \"main\": \"Rain\",\n                            \"description\": \"moderate rain\",\n                            \"icon\": \"10d\"\n                        }\n                    ],\n                    \"base\": \"stations\",\n                    \"main\": {\n                        \"temp\": 297,\n                        \"feels_like\": 297.87,\n                        \"temp_min\": 297,\n                        \"temp_max\": 297,\n                        \"pressure\": 1011,\n                        \"humidity\": 93,\n                        \"sea_level\": 1011,\n                        \"grnd_level\": 985\n                    },\n                    \"visibility\": 10000,\n                    \"wind\": {\n                        \"speed\": 1.64,\n                        \"deg\": 171,\n                        \"gust\": 1.79\n                    },\n                    \"rain\": {\n                        \"1h\": 1.37\n                    },\n                    \"clouds\": {\n                        \"all\": 100\n                    },\n                    \"dt\": 1742215261,\n                    \"sys\": {\n                        \"country\": \"LK\",\n                        \"sunrise\": 1742172266,\n                        \"sunset\": 1742215785\n                    },\n                    \"timezone\": 19800,\n                    \"id\": 1242571,\n                    \"name\": \"Kadugannawa\",\n                    \"cod\": 200\n                },\n                \"_id\": \"67d8185c617fd4d76bc3a753\",\n                \"timeStamp\": \"2025-03-17T12:41:00.476Z\"\n            },\n            {\n                \"data\": {\n                    \"coord\": {\n                        \"lon\": 80.3342,\n                        \"lat\": 7.1993\n                    },\n                    \"weather\": [\n                        {\n                            \"id\": 501,\n                            \"main\": \"Rain\",\n                            \"description\": \"moderate rain\",\n                            \"icon\": \"10d\"\n                        }\n                    ],\n                    \"base\": \"stations\",\n                    \"main\": {\n                        \"temp\": 297,\n                        \"feels_like\": 297.87,\n                        \"temp_min\": 297,\n                        \"temp_max\": 297,\n                        \"pressure\": 1011,\n                        \"humidity\": 93,\n                        \"sea_level\": 1011,\n                        \"grnd_level\": 985\n                    },\n                    \"visibility\": 10000,\n                    \"wind\": {\n                        \"speed\": 1.64,\n                        \"deg\": 171,\n                        \"gust\": 1.79\n                    },\n                    \"rain\": {\n                        \"1h\": 1.37\n                    },\n                    \"clouds\": {\n                        \"all\": 100\n                    },\n                    \"dt\": 1742215261,\n                    \"sys\": {\n                        \"country\": \"LK\",\n                        \"sunrise\": 1742172266,\n                        \"sunset\": 1742215785\n                    },\n                    \"timezone\": 19800,\n                    \"id\": 1242571,\n                    \"name\": \"Kadugannawa\",\n                    \"cod\": 200\n                },\n                \"_id\": \"67d81898617fd4d76bc3a758\",\n                \"timeStamp\": \"2025-03-17T12:42:00.948Z\"\n            },\n            {\n                \"data\": {\n                    \"coord\": {\n                        \"lon\": 80.3342,\n                        \"lat\": 7.1993\n                    },\n                    \"weather\": [\n                        {\n                            \"id\": 501,\n                            \"main\": \"Rain\",\n                            \"description\": \"moderate rain\",\n                            \"icon\": \"10d\"\n                        }\n                    ],\n                    \"base\": \"stations\",\n                    \"main\": {\n                        \"temp\": 297,\n                        \"feels_like\": 297.87,\n                        \"temp_min\": 297,\n                        \"temp_max\": 297,\n                        \"pressure\": 1011,\n                        \"humidity\": 93,\n                        \"sea_level\": 1011,\n                        \"grnd_level\": 985\n                    },\n                    \"visibility\": 10000,\n                    \"wind\": {\n                        \"speed\": 1.64,\n                        \"deg\": 171,\n                        \"gust\": 1.79\n                    },\n                    \"rain\": {\n                        \"1h\": 1.37\n                    },\n                    \"clouds\": {\n                        \"all\": 100\n                    },\n                    \"dt\": 1742215261,\n                    \"sys\": {\n                        \"country\": \"LK\",\n                        \"sunrise\": 1742172266,\n                        \"sunset\": 1742215785\n                    },\n                    \"timezone\": 19800,\n                    \"id\": 1242571,\n                    \"name\": \"Kadugannawa\",\n                    \"cod\": 200\n                },\n                \"_id\": \"67d818d4617fd4d76bc3a75f\",\n                \"timeStamp\": \"2025-03-17T12:43:00.560Z\"\n            },\n            {\n                \"data\": {\n                    \"coord\": {\n                        \"lon\": 80.3342,\n                        \"lat\": 7.1993\n                    },\n                    \"weather\": [\n                        {\n                            \"id\": 501,\n                            \"main\": \"Rain\",\n                            \"description\": \"moderate rain\",\n                            \"icon\": \"10d\"\n                        }\n                    ],\n                    \"base\": \"stations\",\n                    \"main\": {\n                        \"temp\": 297,\n                        \"feels_like\": 297.87,\n                        \"temp_min\": 297,\n                        \"temp_max\": 297,\n                        \"pressure\": 1011,\n                        \"humidity\": 93,\n                        \"sea_level\": 1011,\n                        \"grnd_level\": 985\n                    },\n                    \"visibility\": 10000,\n                    \"wind\": {\n                        \"speed\": 1.64,\n                        \"deg\": 171,\n                        \"gust\": 1.79\n                    },\n                    \"rain\": {\n                        \"1h\": 1.37\n                    },\n                    \"clouds\": {\n                        \"all\": 100\n                    },\n                    \"dt\": 1742215261,\n                    \"sys\": {\n                        \"country\": \"LK\",\n                        \"sunrise\": 1742172266,\n                        \"sunset\": 1742215785\n                    },\n                    \"timezone\": 19800,\n                    \"id\": 1242571,\n                    \"name\": \"Kadugannawa\",\n                    \"cod\": 200\n                },\n                \"_id\": \"67d81910617fd4d76bc3a765\",\n                \"timeStamp\": \"2025-03-17T12:44:00.987Z\"\n            },\n            {\n                \"data\": {\n                    \"coord\": {\n                        \"lon\": 80.3342,\n                        \"lat\": 7.1993\n                    },\n                    \"weather\": [\n                        {\n                            \"id\": 501,\n                            \"main\": \"Rain\",\n                            \"description\": \"moderate rain\",\n                            \"icon\": \"10n\"\n                        }\n                    ],\n                    \"base\": \"stations\",\n                    \"main\": {\n                        \"temp\": 297,\n                        \"feels_like\": 297.87,\n                        \"temp_min\": 297,\n                        \"temp_max\": 297,\n                        \"pressure\": 1011,\n                        \"humidity\": 93,\n                        \"sea_level\": 1011,\n                        \"grnd_level\": 985\n                    },\n                    \"visibility\": 10000,\n                    \"wind\": {\n                        \"speed\": 1.64,\n                        \"deg\": 171,\n                        \"gust\": 1.79\n                    },\n                    \"rain\": {\n                        \"1h\": 1.78\n                    },\n                    \"clouds\": {\n                        \"all\": 100\n                    },\n                    \"dt\": 1742216101,\n                    \"sys\": {\n                        \"country\": \"LK\",\n                        \"sunrise\": 1742172266,\n                        \"sunset\": 1742215785\n                    },\n                    \"timezone\": 19800,\n                    \"id\": 1242571,\n                    \"name\": \"Kadugannawa\",\n                    \"cod\": 200\n                },\n                \"_id\": \"67d81ba42f8b127065f8d7f8\",\n                \"timeStamp\": \"2025-03-17T12:55:00.771Z\"\n            },\n            {\n                \"data\": {\n                    \"coord\": {\n                        \"lon\": 80.3342,\n                        \"lat\": 7.1993\n                    },\n                    \"weather\": [\n                        {\n                            \"id\": 501,\n                            \"main\": \"Rain\",\n                            \"description\": \"moderate rain\",\n                            \"icon\": \"10n\"\n                        }\n                    ],\n                    \"base\": \"stations\",\n                    \"main\": {\n                        \"temp\": 297,\n                        \"feels_like\": 297.87,\n                        \"temp_min\": 297,\n                        \"temp_max\": 297,\n                        \"pressure\": 1011,\n                        \"humidity\": 93,\n                        \"sea_level\": 1011,\n                        \"grnd_level\": 985\n                    },\n                    \"visibility\": 10000,\n                    \"wind\": {\n                        \"speed\": 1.64,\n                        \"deg\": 171,\n                        \"gust\": 1.79\n                    },\n                    \"rain\": {\n                        \"1h\": 2.05\n                    },\n                    \"clouds\": {\n                        \"all\": 100\n                    },\n                    \"dt\": 1742216161,\n                    \"sys\": {\n                        \"country\": \"LK\",\n                        \"sunrise\": 1742172266,\n                        \"sunset\": 1742215785\n                    },\n                    \"timezone\": 19800,\n                    \"id\": 1242571,\n                    \"name\": \"Kadugannawa\",\n                    \"cod\": 200\n                },\n                \"_id\": \"67d81be12f8b127065f8d800\",\n                \"timeStamp\": \"2025-03-17T12:56:01.233Z\"\n            },\n            {\n                \"data\": {\n                    \"coord\": {\n                        \"lon\": 80.3342,\n                        \"lat\": 7.1993\n                    },\n                    \"weather\": [\n                        {\n                            \"id\": 501,\n                            \"main\": \"Rain\",\n                            \"description\": \"moderate rain\",\n                            \"icon\": \"10n\"\n                        }\n                    ],\n                    \"base\": \"stations\",\n                    \"main\": {\n                        \"temp\": 297,\n                        \"feels_like\": 297.87,\n                        \"temp_min\": 297,\n                        \"temp_max\": 297,\n                        \"pressure\": 1011,\n                        \"humidity\": 93,\n                        \"sea_level\": 1011,\n                        \"grnd_level\": 985\n                    },\n                    \"visibility\": 10000,\n                    \"wind\": {\n                        \"speed\": 1.64,\n                        \"deg\": 171,\n                        \"gust\": 1.79\n                    },\n                    \"rain\": {\n                        \"1h\": 2.05\n                    },\n                    \"clouds\": {\n                        \"all\": 100\n                    },\n                    \"dt\": 1742216161,\n                    \"sys\": {\n                        \"country\": \"LK\",\n                        \"sunrise\": 1742172266,\n                        \"sunset\": 1742215785\n                    },\n                    \"timezone\": 19800,\n                    \"id\": 1242571,\n                    \"name\": \"Kadugannawa\",\n                    \"cod\": 200\n                },\n                \"_id\": \"67d81c1c2f8b127065f8d80a\",\n                \"timeStamp\": \"2025-03-17T12:57:00.667Z\"\n            },\n            {\n                \"data\": {\n                    \"coord\": {\n                        \"lon\": 80.3342,\n                        \"lat\": 7.1993\n                    },\n                    \"weather\": [\n                        {\n                            \"id\": 804,\n                            \"main\": \"Clouds\",\n                            \"description\": \"overcast clouds\",\n                            \"icon\": \"04n\"\n                        }\n                    ],\n                    \"base\": \"stations\",\n                    \"main\": {\n                        \"temp\": 295.57,\n                        \"feels_like\": 296.35,\n                        \"temp_min\": 295.57,\n                        \"temp_max\": 295.57,\n                        \"pressure\": 1013,\n                        \"humidity\": 95,\n                        \"sea_level\": 1013,\n                        \"grnd_level\": 986\n                    },\n                    \"visibility\": 10000,\n                    \"wind\": {\n                        \"speed\": 1.6,\n                        \"deg\": 112,\n                        \"gust\": 1.55\n                    },\n                    \"clouds\": {\n                        \"all\": 100\n                    },\n                    \"dt\": 1742226887,\n                    \"sys\": {\n                        \"country\": \"LK\",\n                        \"sunrise\": 1742172266,\n                        \"sunset\": 1742215785\n                    },\n                    \"timezone\": 19800,\n                    \"id\": 1242571,\n                    \"name\": \"Kadugannawa\",\n                    \"cod\": 200\n                },\n                \"_id\": \"67d845c7cde0c47927449300\",\n                \"timeStamp\": \"2025-03-17T15:54:47.487Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "https://weather-pw7jvtfnj-pubudu98coders-projects.vercel.app/api",
+			"type": "default"
+		}
+	]
+}
